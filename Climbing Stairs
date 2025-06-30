@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int solve(int n,vector<int> &temp){
+        if(n == 1) return 1;
+        if(n == 0) return 1;
+
+        if(temp[n] != -1) return temp[n];
+
+        int left = solve(n-1,temp);
+        int right = solve(n-2,temp);
+
+        temp[n] = left + right;
+        return temp[n];
+    }
+    int climbStairs(int n) {
+        vector<int> temp(n+1,-1);
+        return solve(n,temp);
+    }
+};
