@@ -6,7 +6,7 @@ public:
 
     //     if(dp[idx] != -1) return dp[idx];
 
-    //     int pick = nums[idx] + solve(idx-2,nums,dp);
+    //     int pick = nums[idx]  + solve(idx-2,nums,dp);
 
     //     int not_pick = 0 + solve(idx-1,nums,dp);
     //     return dp[idx] = max(pick,not_pick);
